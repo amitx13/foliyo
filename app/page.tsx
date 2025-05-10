@@ -14,6 +14,7 @@ import ParticleBackground from "@/components/particle-background"
 import SkillsGlobe from "@/components/skills-globe"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 
 const HeroCanvas = dynamic(() => import("@/components/hero-canvas"), { ssr: false })
 
@@ -27,7 +28,6 @@ export default function Home() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
     offset: ["start", "end"],
   })
 
@@ -160,7 +160,7 @@ export default function Home() {
                 { name: "Projects", href: "#projects" },
                 { name: "Open Source", href: "#contributions" },
                 { name: "Contact", href: "#contact" },
-              ].map((item, index) => (
+              ].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -253,7 +253,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 2.6 }}
                 className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
               >
-                Hi, I'm{" "}
+                {`Hi, I'm{" "}`}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 relative">
                   Amit Prasad
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
@@ -356,7 +356,7 @@ export default function Home() {
                       <div className="absolute backface-hidden w-full h-full">
                         <div className="p-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500">
                           <div className="w-full h-full rounded-xl overflow-hidden">
-                            <img
+                            <Image
                               src="./public/logo.png"
                               alt="Profile"
                               className="w-full h-full object-cover"
