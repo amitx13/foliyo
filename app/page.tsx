@@ -253,7 +253,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 2.6 }}
                 className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
               >
-                {`Hi, I'm{" "}`}
+                {`Hi, I'm`}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 relative">
                   Amit Prasad
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
