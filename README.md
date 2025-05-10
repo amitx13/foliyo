@@ -16,7 +16,7 @@ Visit http://localhost:3000 in your browser to view the portfolio.
 Tech Stack
 Frontend: Next.js, React, TypeScript, TailwindCSS, Shadcn
 
-Dev Tools: Docker, Git
+Dev Tools: Git
 
 Deploy
 For deployment, you can use platforms like Vercel or Netlify.
